@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Authentic Chinese Food</title>
+    <link rel="stylesheet" href="/css/main.css">
+    
+		<style>
+			
+			.centered {
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+        color:#ffffff;
+			  transform: translate(-50%, -50%);
+			}
+			
+			.parallax {
+			  /* The image used */
+			  background-image: url("/images/dumpling.jpg");
+
+			  /* Set a specific height */
+			  height: 550px; 
+
+			  /* Create the parallax scrolling effect */
+			  background-attachment: fixed;
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			}
+			
+			/* Turn off parallax scrolling for tablets and phones. */
+			@media only screen and (max-device-width: 991px) {
+			  .parallax {
+					height: 400px; 
+			    background-attachment: scroll;
+			  }
+				.centered {
+					position: static;
+					top: 0%;
+					left: 0%;
+          color:#000000;
+					transform: translate(-0%, -50%);
+				}
+			}
+		</style>
+  </head>
+
+  <body>
+    <nav>
+			<ul>
+				<li><a href="/hw3_business_website">Home</a></li>
+        <li><a href="/hw3_business_website/about">About</a></li>
+				<li><a href="/hw3_business_website/menu">Menu</a></li>
+				<li><a href="/hw3_business_website/contact">Contact</a></li>
+			</ul>
+    </nav>
+		
+		<div class="parallax"></div>
+    
+	  <div class="centered">
+      <h1 style="font-family:sans-serif;" >
+        Authentic Chinese Food
+      </h1>
+    </div>
+	
+		<div class="container">
+      <p>Welcome to Authentic Chinese Food!</p>
+      <p>Here at Authentic Chinese Food's kitchen, 
+        we dedicate in introducing real traditional Chinese cuisine with out 
+        own interpretation and creative takes on classic Asian themes. </p>
+      <p>We also look forward to partner with local Chinese restaurants 
+        to provide a rich variety of Chinese food. </p>
+      <p>Please check out our <a href="/hw3_business_website/menu">menu</a> here!</p>
+      <p><a href="/hw3_business_website/contact">Contact us</a> for more information!</p>
+
+		</div>
+
+	
+	  <footer>
+		  <ul>
+			  <li><a href="mailto:yaomuyin@gmail.com">Email</a></li>
+        <li><a href="https://forms.gle/9MVfRFzbS95woV3j9" target= "_blank">Feedback</a></li>
+        <li><a href="/">HomeHome</a></li>
+		  </ul>
+	  </footer>
+		
+  </body>
+
+</html>
+
+
+
+
+
