@@ -3,66 +3,165 @@
 <head>
 	<meta charset="utf-8">
 	<title>Bruce's Juices - Home</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/COMP20_MIDTERM/style.css"> -->
+	<style>	
+		body {
+			width: 80%;
+		  margin: auto;
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.topnav {
+		  overflow: hidden;
+		  background-color: #2bb656;
+		}
+
+		.topnav a {
+		  float: right;
+		  color: #f2f2f2;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		.topnav a.logo{
+		  float: left;
+		}
+
+		.topnav a:hover {
+		  background-color: #FFF;
+		  color: #2bb656;
+		}
+
+	</style>
+  
+  <script language="javascript">
+    
+    function Fruits(name, property){
+      this.name= name;
+      this.property = property;
+    }
+    
+    fruits = [new Fruits("Mango Madness", "tropical"),
+              new Fruits("Kiwi Karma", "refreshing"),
+              new Fruits("Applepocalypse", "apple"),
+              new Fruits("Orange Oasis", "orange"),
+              new Fruits("Berry Blast", "berries"),
+              new Fruits("blueberry", "berries"),
+              new Fruits("Cranberry Crash", "berries"),
+              new Fruits("Raspberry Rumble", "sour"),
+              new Fruits("Strawberry Banana Supernova", "banana"),
+            ];
+    
+    window.onload=function(){
+
+      // document.getElementById("array-data").innerHTML = getFactors(10);
+      function match_property(input_property){
+        for (i=0;i < fruits.length; i++) {
+          myChkBox = document.form1.favFruit[i];
+          if (myChkBox.checked== true){
+            result = "Likes " + myChkBox.value + " <br />";
+            have_favFruit++;	
+          }
+        }
+
+      }
+
+      document.getElementById("show-data").onclick = function(){
+          
+          have_favFruit = 0;
+          result = "";
+          
+          for (i=0;i < document.form1.favFruit.length; i++) {
+            myChkBox = document.form1.favFruit[i];
+            if (myChkBox.checked== true){
+              result = "Likes " + myChkBox.value + " <br />";
+              have_favFruit++;	
+            }
+          }
+          
+          if (have_favFruit == 0) {
+            result = "";
+            for (i=0;i < document.form1.preferTaste.length; i++) {
+              myChkBox = document.form1.preferTaste[i];
+              if (myChkBox.checked == true)
+                result += "Likes " + myChkBox.value + " <br />";	
+            }
+          }
+          
+          document.getElementById("fruit-data").innerHTML = result;
+        }
+
+      }
+    
+  </script>
+
+
 </head>
 
-<header>
-  <nav>
-      <a href="#"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
-      <a href="#">contact us</a>
-      <a href="#">about us</a>
-      <a href="#">locations</a>
-      <a href="flavors.html">flavors</a>
-      <a href="suggestions.html">suggestions</a>
-      <a href="#">why bruce</a>
-      <a href="#">recipes</a>   
-  </nav>
-</header>
-
 <body>
-  <div class="container">
-    <h1>Contact Us!</h1>
-    
-    <p></p>
-    
-    <hr/>
-    
-    <form action='#' method='post'>
-      <label>Any flavor suggestions? </label> <br/>
-      <input type="text" name='flavor' id='flavor' required='1'><br/>
-            
-      <br/>
-      <label>Favorite Main Course (pick one): </label>
-        <input type="radio" name="Course" value="rice">Rice
-        <input type="radio" name="Course" value="noodle">Noodle
-        <input type="radio" name="Course" value="porridge">Porridge
-        <input type="radio" name="Course" value="random">Yet to try!
-      <br/>
-    
-      <label>Favorite Taste (pick all that apply):</label>
-        <input type="checkbox" name="taste" value="sweet">Sweet
-        <input type="checkbox" name="taste" value="bitter">Bitter
-        <input type="checkbox" name="taste" value="sour">Sour
-        <input type="checkbox" name="taste" value="salty">Salty
-        <input type="checkbox" name="taste" value="meaty">Meaty
-        <input type="checkbox" name="taste" value="cool">Cool
-        <input type="checkbox" name="taste" value="hot">Hot
-      <br/>	<br/> <br/>
-      
-      <input type = "submit" value = "Submit">
-    
-    </form>
-</body>
+	<div class="topnav">
+	  <a class="logo" href="/COMP20_MIDTERM"><img border="0" alt="Bruce's Juices" src="/COMP20_MIDTERM/images/FinalLogo.png" style="height:3vw;"></a>
+		<a href="#">contact us</a>
+		<a href="#">about us</a>
+		<a href="#">locations</a>
+		<a href="/COMP20_MIDTERM/flavors/">flavors</a>
+		<a href="/COMP20_MIDTERM/flavor_suggestion">suggestions</a>
+		<a href="#">why bruce</a>
+		<a href="#">recipes</a>	
+	</div>
 
-<footer>
-  <ul>
-    <li><a href="#">Email</a></li>
-    <li><a href="#">Feedback</a></li>
-  </ul>
-</footer>
+	<div style="padding-left:16px">
+	  <h2>Bruce's Juices - Home</h2>
+	  
+    <hr>
+    <h4>Get your best match.</h2>
+    <form name="form1">
+      Favoriate fruit? 
+      <input type= "checkbox" value="apple" name="favFruit">Apple
+      <input type= "checkbox" value="orange" name="favFruit">Orange
+      <input type= "checkbox" value="banana" name="favFruit">Banana
+      <input type= "checkbox" value="berries" name="favFruit">Berries
+      <input type= "checkbox" value="surprise" name="favFruit">Surprise me!
+      <br><br>
+      
+      Prefer? <br>
+      <input type= "checkbox" value="sweet" name="preferTaste">sweet
+      <input type= "checkbox" value="sour" name="preferTaste">sour
+      <br>
+      
+      <input type= "checkbox" value="berry" name="preferTaste">berry
+      <input type= "checkbox" value="tropical" name="preferTaste">tropical
+      <br>
+      
+      <input type= "checkbox" value="refreshing" name="preferTaste">refreshing
+      <input type= "checkbox" value="filling" name="preferTaste">filling
+      <br>
+      
+      <br />
+      
+      <input type = "button" value ="Show data" id= "show-data"> 
+      <hr>   
+    </form>
+    <br>
+    
+    <div id="fruit-data"></div>
+    
+    
+	</div>
+	
+
+</body>
 
 
 </html>
+
+
+
+
+
+
 
 
 
