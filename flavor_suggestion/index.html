@@ -1,75 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-	<title>Bruce's Juices - Flavor Suggestions</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<style>
+	<meta charset="utf-8">
+	<title>Bruce's Juices - Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="/COMP20_MIDTERM/style.css"> -->
+	<style>	
+		body {
+			width: 80%;
+		  margin: auto;
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.topnav {
+		  overflow: hidden;
+		  background-color: #2bb656;
+		}
+
+		.topnav a {
+		  float: right;
+		  color: #f2f2f2;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		.topnav a.logo{
+		  float: left;
+		}
+
+		.topnav a:hover {
+		  background-color: #FFF;
+		  color: #2bb656;
+		}
 
 	</style>
-	<!-- <meta name='viewport' content="width=device-width, initialscale=1"> -->
+
 </head>
-<header>
-	<nav>
-		<a href="index.html"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
+
+<body>
+	<div class="topnav">
+	  <a class="logo" href="/COMP20_MIDTERM"><img border="0" alt="Bruce's Juices" src="/COMP20_MIDTERM/images/FinalLogo.png" style="height:3vw;"></a>
 		<a href="#">contact us</a>
 		<a href="#">about us</a>
 		<a href="#">locations</a>
-		<a href="#">flavors</a>
-		<a href="#">suggestions</a>
+		<a href="/COMP20_MIDTERM/flavors/">flavors</a>
+		<a href="/COMP20_MIDTERM/flavor_suggestion">suggestions</a>
 		<a href="#">why bruce</a>
-		<a href="#">recipes</a>		
-	</nav>
-  <h1>Contact Us!</h1>
-</header>
+		<a href="#">recipes</a>	
+	</div>
 
-<body>
-  <div class="container">
-    
-  	<div style="height:10000px;"></div>
-    
-    <p></p>
-    
-    <hr/>
-    
-    <form action='#' method='post'>
-      <label>Any flavor suggestions? </label> <br/>
-      <input type="text" name='flavor' id='flavor' required='1'><br/>
-            
-      <br/>
-      <label>Favoriate Main Course (pick one): </label>
-        <input type="radio" name="Course" value="rice">Rice
-        <input type="radio" name="Course" value="noodle">Noodle
-        <input type="radio" name="Course" value="porridge">Porridge
-        <input type="radio" name="Course" value="random">Yet to try!
-      <br/>
-    
-      <label>Favoriate Taste (pick all that apply):</label>
-        <input type="checkbox" name="taste" value="sweet">Sweet
-        <input type="checkbox" name="taste" value="bitter">Bitter
-        <input type="checkbox" name="taste" value="sour">Sour
-        <input type="checkbox" name="taste" value="salty">Salty
-        <input type="checkbox" name="taste" value="meaty">Meaty
-        <input type="checkbox" name="taste" value="cool">Cool
-        <input type="checkbox" name="taste" value="hot">Hot
-      <br/>	<br/> <br/>
-      
-      <input type = "submit" value = "Submit">
-    
-    </form>
-    
-  </div>
+	<div style="padding-left:16px">
+	  <h2>Bruce's Juices - Home</h2>
+	  <p>Some content..</p>
+	</div>
+	
+	
+	<div style="height:10000px;"></div>
+	
+  <form action='#' method='post'>
+    <label>Any flavor suggestions? </label> <br/>
+    <input type="text" name='flavor' id='flavor' required='1'><br/>
+          
+    <br/>
+    <label>Favoriate Main Course (pick one): </label>
+      <input type="radio" name="Course" value="rice">Rice
+      <input type="radio" name="Course" value="noodle">Noodle
+      <input type="radio" name="Course" value="porridge">Porridge
+      <input type="radio" name="Course" value="random">Yet to try!
+    <br/>
   
+    <label>Favoriate Taste (pick all that apply):</label>
+      <input type="checkbox" name="taste" value="sweet">Sweet
+      <input type="checkbox" name="taste" value="bitter">Bitter
+      <input type="checkbox" name="taste" value="sour">Sour
+      <input type="checkbox" name="taste" value="salty">Salty
+      <input type="checkbox" name="taste" value="meaty">Meaty
+      <input type="checkbox" name="taste" value="cool">Cool
+      <input type="checkbox" name="taste" value="hot">Hot
+    <br/>	<br/> <br/>
+    
+    <input type = "submit" value = "Submit">
+  
+  </form>
+  
+  
+	<footer>
+		<ul>
+			<li><a href="#">Email</a></li>
+			<li><a href="#">Feedback</a></li>
+		</ul>
+	</footer>
+
 </body>
 
-	  <footer>
-		  <ul>
-			  <li><a href="mailto:yaomuyin@gmail.com">Email</a></li>
-        <li><a href="https://forms.gle/9MVfRFzbS95woV3j9" target= "_blank">Feedback</a></li>
-		  </ul>
-	  </footer>
-		
-  </body>
 
 </html>
 
