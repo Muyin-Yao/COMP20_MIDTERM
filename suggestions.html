@@ -53,7 +53,7 @@
               new Fruits("Raspberry Rumble", "sour"),
               new Fruits("Strawberry Banana Supernova", "banana"),
             ];
-						
+		
 		function getMatch(input_property, array_fruits){
 			result = "";
 			for(var i = 0; i < array_fruits.length; i++){
@@ -62,10 +62,11 @@
 				}
 			}
 			return result;
-		}  
+		}
+		
+		document.getElementById("result").innerHTML = getMatch("apple", array_fruits);//45
 		  
     window.onload=function(){
-
       document.getElementById("show-data").onclick = function(array_fruits){
           array_fruits = array_fruits;
           have_favFruit = 0;
@@ -111,19 +112,21 @@
 
 
 </head>
-
+<header>
+	<nav>
+	    <a href="#"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
+	    <a href="#">contact us</a>
+	    <a href="#">about us</a>
+	    <a href="#">locations</a>
+	    <a href="flavors.html">flavors</a>
+	    <a href="suggestions.html">suggestions</a>
+	    <a href="#">why bruce</a>
+	    <a href="#">recipes</a>   
+  </nav>
+</header>
 <body>
-	<div class="topnav">
-	  <a class="logo" href="/COMP20_MIDTERM"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:3vw;"></a>
-		<a href="#">contact us</a>
-		<a href="#">about us</a>
-		<a href="#">locations</a>
-		<a href="flavors.html">flavors</a>
-		<a href="flavor_suggestion">suggestions</a>
-		<a href="#">why bruce</a>
-		<a href="#">recipes</a>	
-	</div>
 
+	
 	<div style="padding-left:16px">
 	  <h2>Bruce's Juices - Home</h2>
 	  
@@ -159,6 +162,7 @@
     <br>
     
     <div id="fruit-data"></div>  
+		<div id="result"></div>
     
 	</div>
 	
