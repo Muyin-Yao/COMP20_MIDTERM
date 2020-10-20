@@ -31,6 +31,7 @@ a { text-decoration: none;}
 
 
 nav a, nav ul li a{
+	display: inline; 
 	background-color: #2bb656;
   color: white;
 	padding:10px;
