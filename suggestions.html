@@ -43,7 +43,7 @@
       this.property = property;
     }
     
-    fruits = [new Fruits("Mango Madness", "tropical"),
+    array_fruits = [new Fruits("Mango Madness", "tropical"),
               new Fruits("Kiwi Karma", "refreshing"),
               new Fruits("Applepocalypse", "apple"),
               new Fruits("Orange Oasis", "orange"),
@@ -56,20 +56,8 @@
     
     window.onload=function(){
 
-      // document.getElementById("array-data").innerHTML = getFactors(10);
-      function match_property(input_property){
-        for (i=0;i < fruits.length; i++) {
-          myChkBox = document.form1.favFruit[i];
-          if (myChkBox.checked== true){
-            result = "Likes " + myChkBox.value + " <br />";
-            have_favFruit++;	
-          }
-        }
-
-      }
-
-      document.getElementById("show-data").onclick = function(fruits){
-          
+      document.getElementById("show-data").onclick = function(array_fruits){
+          array_fruits = array_fruits;
           have_favFruit = 0;
           result = "";
           
@@ -78,6 +66,17 @@
             if (myChkBox.checked== true){
               result = "Likes " + myChkBox.value + " <br />";
               have_favFruit++;	
+							
+							for (j=0; i<array_fruits.length; j++) {
+								document.write(fruits[j].property + " <br />");
+								document.write(fruits[j].property + " <br />");
+								
+								if(fruits[j].property = myChkBox.value){
+									result += "Try " + fruits[j].name + " <br />";
+									document.write(result += "Try " + fruits[j].name + " <br />");
+								}
+							}
+							
             }
           }
           
@@ -87,11 +86,7 @@
               myChkBox = document.form1.preferTaste[i];
               if (myChkBox.checked == true){
 								result += "Likes " + myChkBox.value + " <br />";	
-								for(j=0; i<fruits.length; j++){
-									if(fruits[j].property = myChkBox.value){
-										result += "Try " + fruits[j].name + " <br />";
-									}
-								}
+
 							}
                 
             }
