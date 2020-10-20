@@ -2,7 +2,7 @@ body {
  	width: 100%; 
  	padding-top:6.5vw;
  	color: black;
- 	}
+}
 
 .container{
 	margin: 0 5%;
@@ -36,18 +36,6 @@ nav a {
 }
 
 a { text-decoration: none;}
-
-
-/*nav ul li a{
-	display: inline; 
-	background-color: #2bb656;
-  	color: white;
-	padding:10px;
-	border-radius: 4px;
-	text-decoration: none;
-	text-align:center; 
-	margin:5px;
-}
 
 nav ul li, */
 footer ul li { display: inline; margin-right: 20px; }
