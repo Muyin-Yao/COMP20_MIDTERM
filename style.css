@@ -41,9 +41,11 @@ nav ul li{
 	margin:5px;
 } */
 
+a { text-decoration: none; color: #999; }
+
 nav a:hover {
   
-  	background-color:white;
+  background-color:white;
 	color:#2bb656;
 	
 }
