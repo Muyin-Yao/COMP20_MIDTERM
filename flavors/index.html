@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
   	<title>Bruce's Juices - Flavor Suggestions</title>
-    <link rel="stylesheet" type="text/css" href="/COMP20_MIDTERM/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/COMP20_MIDTERM/style.css"> -->
     <style>
-    
       body {
         width: 80%;
         margin: auto;
@@ -71,18 +70,29 @@
 
 </head>
   
-  <body>
-    <nav>
-      <a href="/COMP20_MIDTERM"><img border="0" alt="Bruce's Juices" src="/COMP20_MIDTERM/images/FinalLogo.png" style="height:3vw;"></a>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>	
-  	</nav>
+<body>
+  <div class="topnav">
+	  <a class="logo" href="/COMP20_MIDTERM"><img border="0" alt="Bruce's Juices" src="/COMP20_MIDTERM/images/FinalLogo.png" style="height:3vw;"></a>
+		<a href="#">contact us</a>
+		<a href="#">about us</a>
+		<a href="#">locations</a>
+		<a href="/COMP20_MIDTERM/flavors/">flavors</a>
+		<a href="/COMP20_MIDTERM/flavor_suggestion">suggestions</a>
+		<a href="#">why bruce</a>
+		<a href="#">recipes</a>	
+	</div>
     
-    <h1>Check out our juice flavors</h1>
+  <div style="padding-left:16px">
+    <h2>Bruce's Juices - Juice Flavors</h2>
+    
+    <div class="card">
+      <div class="image_parent" style="background-image: url('/COMP20_MIDTERM/images/kiwi.jpg');"></div>
+      <h1> Kiwi Karma </h1>
+      <button id="show">Show</button>
+      <p>Freshly picked from... <br>
+        <button id="hide">Hide</button>
+      </p>
+    </div>
     
     <div class="card">
       <div class="image_parent" style="background-image: url('/COMP20_MIDTERM/images/kiwi.jpg');"></div>
@@ -147,14 +157,17 @@
       </p>
     </div>
     
-	  <footer>
-		  <ul>
-			  <li><a href="#">Email</a></li>
-        <li><a href="#">Feedback</a></li>
-		  </ul>
-	  </footer>
+  </div>
+    
+    
+	<footer>
+		<ul>
+		 <li><a href="#">Email</a></li>
+    <li><a href="#">Feedback</a></li>
+		</ul>
+	</footer>
 		
-  </body>
+</body>
 
 </html>
 
