@@ -30,3 +30,9 @@ nav a:hover {
 	color:#2bb656;
 	
 }
+
+footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
+
+footer ul li { display: inline; margin-right: 20px; }
+
+
