@@ -27,6 +27,9 @@ nav{
 	margin:5px;
 } */
 
+a { text-decoration: none;}
+
+
 nav a, nav ul li a{
 	background-color: #2bb656;
   color: white;
