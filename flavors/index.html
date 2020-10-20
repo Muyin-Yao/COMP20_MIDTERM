@@ -31,7 +31,7 @@
         font-family: arial;
       }
 
-      .card button {
+      /* .card button {
         border: none;
         outline: 0;
         padding: 12px;
@@ -41,9 +41,21 @@
         cursor: pointer;
         width: 100%;
         font-size: 18px;
-      }
+      } */
 
     </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#hide").click(function(){
+          $("p").hide();
+        });
+        $("#show").click(function(){
+          $("p").show();
+        });
+      });
+    </script>
 
 </head>
   
@@ -66,6 +78,8 @@
       <div class="image_parent image_child"></div>
       <!-- <img src="/images/jiaozi.jpg" alt="jiaozi"> -->
       <h1> Kiwi Karma </h1>
+      <button id="hide">Hide</button>
+      <button id="show">Show</button>
       <p>Freshly picked from... </p>
     </div>
 
