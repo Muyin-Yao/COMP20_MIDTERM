@@ -24,27 +24,31 @@
 	            ];
 			
 			function getMatch(input_property){
-				result = "";
+				match = "";
+				
+				if (input_property == "random"){
+					random_i = Math.floor((Math.random() * 9));
+					match = match + array_fruits[random_i].name + " <br />";    //no .value here
+				}
+				
 				for(var i = 0; i < array_fruits.length; i++){
 					if (array_fruits[i].property == input_property){
-						result = result + array_fruits[i].name + " <br />";    //no .value here
+						match = match + array_fruits[i].name + " <br />";    //no .value here
 					}
+					
+
 				}
-				return result;
+				return match;
 			}
-			
-			// document.getElementById("result").innerHTML = getMatch("apple");//45
-		  
     
       document.getElementById("show-data").onclick = function(array_fruits){
           array_fruits = array_fruits;
           // have_favFruit = 0;
-          result = "";
 					result_2 = "";
           
           for (i=0;i < document.form1.favFruit.length; i++) {
             myChkBox = document.form1.favFruit[i];
-            if (myChkBox.checked== true){
+            if (myChkBox.checked == true){
               // have_favFruit++;	
 							result_2 = getMatch(myChkBox.value) + " (preference based on: " + myChkBox.value + ") " + " <br />" + " <br />";					
             }
@@ -54,8 +58,6 @@
             for (i=0;i < document.form1.preferTaste.length; i++) {
               myChkBox = document.form1.preferTaste[i];
               if (myChkBox.checked == true){
-								result += "Likes " + myChkBox.value + " <br />";	
-								
 								result_2 += getMatch(myChkBox.value) + " (preference based on: " + myChkBox.value + ") " + " <br />" + " <br />";		
 							}
                 
@@ -96,7 +98,7 @@
       <input type= "radio" value="apple" name="favFruit">Apple
       <input type= "radio" value="orange" name="favFruit">Orange
       <input type= "radio" value="berries" name="favFruit">Berries
-      <input type= "radio" value="surprise" name="favFruit">Surprise me!
+      <input type= "radio" value="random" name="favFruit">Surprise me!
       <br><br>
       
       Prefer? <br>
@@ -119,8 +121,7 @@
     </form>
     <br>
     
-    <div id="fruit-data"></div>  
-		<div id="result"></div>
+    <div id="fruit-data" style = "font-weight:bold; font-size:1.5em;"></div>  
     
 	</div>
 	
