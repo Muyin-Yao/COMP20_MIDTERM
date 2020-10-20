@@ -1,4 +1,8 @@
-body { margin: auto; width: 80%; }
+body { 
+	margin: auto;
+ 	width: 80%; 
+ 	padding-top:5.5vw;
+ 	}
 
 nav{
 	font-family: sans-serif;
@@ -10,14 +14,27 @@ nav{
 	color:#FFFFFF;
 	font-weight:bold;
 	text-decoration: none;
-	padding: 10px;
+	padding: 15 0px;
 	height:auto;
 	width:auto;
-	margin-left: 10px;
+	margin-left: 0px;
 	position:fixed;
 	top:0;
 	/*background-color:rgb(30,130,255);*/
 }
+
+/*.h{
+	background-color: #2bb656;
+  	color: white;
+  	text-decoration:none;
+	padding:2.5px 0;
+}*/
+nav a {
+	text-decoration: none;
+	text-align:center; 
+	margin:auto;
+}
+
 
 /* nav a{
 	display: inline; 
@@ -30,7 +47,7 @@ nav{
 a { text-decoration: none;}
 
 
-nav a, nav ul li a{
+/*nav ul li a{
 	display: inline; 
 	background-color: #2bb656;
   	color: white;
@@ -41,10 +58,11 @@ nav a, nav ul li a{
 	margin:5px;
 }
 
-nav ul li, footer ul li { display: inline; margin-right: 20px; }
+nav ul li, */
+footer ul li { display: inline; margin-right: 20px; }
 
 nav a:hover {
-  background-color:white;
+	background-color:white;
 	color:#2bb656;
 	
 }
