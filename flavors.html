@@ -5,30 +5,15 @@
   	<title>Bruce's Juices - Flavors</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-
       .image_parent {
  			  height: 300px; 
         max-width: 100%;
-
  			  background-position: center;
  			  background-repeat: no-repeat;
  			  background-size: cover;
  			}
-      
-      .image_child {
-        background-image: url("images/kiwi.jpg");
-      }
-      
-      .image_child_2 {
-        background-image: url("/images/Apple.jpg");
-      }
-      
-      .image_child_3 {
-        background-image: url("./images/Mango.jpg");
-      }
-                 
       .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
         max-width: 40%;
         padding: 10px;
         display: inline-block;
@@ -37,11 +22,11 @@
         margin-bottom: 20px;
         text-align: center;
         font-family: arial;
+        border: 3px solid #2bb656;
       }
-
     </style>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
         $("#hide").click(function(){
@@ -51,7 +36,7 @@
           $("p").show();
         });
       });
-    </script>
+    </script> -->
 
 </head>
 
@@ -69,81 +54,56 @@
 </header>
   
   <body>
-    <br/>
-    <br/>
-    <h1>Check out our juice flavors</h1>
-    
-    <div class="card">
-      <div class="image_parent" style="background-image: url('images/kiwi.jpg');"></div>
-      <h1> Kiwi Karma </h1>
-      <button id="show">Show</button>
-      <p>Freshly picked from... <br>
-        <button id="hide">Hide</button>
-      </p>
+    <div class="container">
+      <h2>Bruce's Juices - Juice Flavors</h2>
+      
+      <div class="card">
+        <div class="image_parent" style="background-image: url('images/kiwi.jpg');"></div>
+        <h1> Kiwi Karma </h1>
+      </div>
+      
+      <div class="card">
+        <div class="image_parent" style="background-image: url('images/Apple.jpg');"></div>
+        <h1> Applepocalypse </h1>
+      </div>
+      
+      <div class="card">
+        <div class="image_parent" style="background-image: url('images/Orange.jpg');"></div>
+        <h1> Orange Oasis </h1>
+      </div>
+      
+      <div class="card">
+        <div class="image_parent" style="background-image: url('images/Blueberry.jpg');"></div>
+        <h1> Blueberry Bash </h1>
+      </div>
+      
+      <div class="card">
+        <div class="image_parent" style="background-image: url('images/Raspberry.jpg');"></div>
+        <h1> Raspberry Rumble </h1>
+      </div>
+      
+      <div class="card">
+        <div class="image_parent" style="background-image: url('images/Coconut.jpg');"></div>
+        <h1> Coconut Calamity </h1>
+      </div>
+      
+      <div class="card">
+        <div class="image_parent" style="background-image: url('images/Tangerine.jpg');"></div>
+        <h1> Tangerine Totality </h1>
+      </div>
     </div>
     
-    <div class="card">
-      <div class="image_parent" style="background-image: url('images/Apple.jpg');"></div>
-      <h1> Applepocalypse </h1>
-      <button id="show">Show</button>
-      <p>Freshly picked from... <br>
-        <button id="hide">Hide</button>
-      </p>
-    </div>
+  </div>
     
-    <div class="card">
-      <div class="image_parent" style="background-image: url('images/Orange.jpg');"></div>
-      <h1> Orange Oasis </h1>
-      <button id="show">Show</button>
-      <p>Freshly picked from... <br>
-        <button id="hide">Hide</button>
-      </p>
-    </div>
     
-    <div class="card">
-      <div class="image_parent" style="background-image: url('images/Blueberry.jpg');"></div>
-      <h1> Blueberry Bash </h1>
-      <button id="show">Show</button>
-      <p>Freshly picked from... <br>
-        <button id="hide">Hide</button>
-      </p>
-    </div>
-    
-    <div class="card">
-      <div class="image_parent" style="background-image: url('images/Raspberry.jpg');"></div>
-      <h1> Raspberry Rumble </h1>
-      <button id="show">Show</button>
-      <p>Freshly picked from... <br>
-        <button id="hide">Hide</button>
-      </p>
-    </div>
-    
-    <div class="card">
-      <div class="image_parent" style="background-image: url('images/Coconut.jpg');"></div>
-      <h1> Coconut Calamity </h1>
-      <button id="show">Show</button>
-      <p>Freshly picked from... <br>
-        <button id="hide">Hide</button>
-      </p>
-    </div>
-    
-    <div class="card">
-      <div class="image_parent" style="background-image: url('images/Tangerine.jpg');"></div>
-      <h1> Tangerine Totality </h1>
-      <button id="show">Show</button>
-      <p>Freshly picked from... <br>
-        <button id="hide">Hide</button>
-      </p>
-    </div>
-    
-	  <footer>
-		  <ul>
-			  <li><a href="#">Email</a></li>
-        <li><a href="#">Feedback</a></li>
-		  </ul>
-	  </footer>
+	<footer>
+		<ul>
+		 <li><a href="#">Email</a></li>
+    <li><a href="#">Feedback</a></li>
+		</ul>
+	</footer>
 		
-  </body>
+</body>
 
 </html>
 
