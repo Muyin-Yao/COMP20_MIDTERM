@@ -12,7 +12,7 @@ nav{
 	text-decoration: none;
 	padding: 15px 0;
 	height:5vw;
-	width:100%;
+	/* width:auto; */
 	margin-left:0px;
 
 	position:fixed;
