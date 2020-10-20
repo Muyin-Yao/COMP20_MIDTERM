@@ -66,6 +66,15 @@
           
           document.getElementById("fruit-data").innerHTML = "Try: " + " <br />" + result_2;
         }
+				
+				document.getElementById("show-input").onclick = function(array_fruits){
+						user_name = document.form2.user_name.value;
+						flavor_recommended = document.form2.flavor_recommended.value;
+
+						result = "User " + user_name + " recommended " + flavor_recommended + ".";
+						
+						document.getElementById("recommend-data").innerHTML = result;
+					}
 
       }
     
@@ -119,9 +128,32 @@
       <input type = "button" value ="Show data" id= "show-data"> 
       <hr>   
     </form>
+		
     <br>
     
-    <div id="fruit-data" style = "font-weight:bold; font-size:1.5em;"></div>  
+    <div id="fruit-data"></div>  
+		<!-- style = "font-weight:bold; font-size:1.5em;" -->
+		<hr> 
+		
+		<h4>Any flavors recommended?</h2>
+			<form name="form2">
+				User: 
+				<input type = "text"	name="user_name" id="user_1">
+				<br />
+				
+				Flavor recommended: 
+				<input type = "text"	name="flavor_recommended" id="fav_1">
+	      <br />
+				
+	      <input type = "button" value ="submit" id= "show-input"> 
+	      <hr>   
+	    </form>
+			
+			<div id="recommend-data"></div>  
+
+		
+		</form>
+
     
 	</div>
 	
