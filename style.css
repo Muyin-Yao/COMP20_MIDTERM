@@ -50,6 +50,9 @@ body {
 
 
 .topnav {
+  font-family:Tahoma, Impact;
+  color:#FFFFFF;
+  font-weight:bold;
   overflow: hidden;
   background-color: #2bb656;
 }
