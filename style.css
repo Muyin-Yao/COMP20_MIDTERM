@@ -18,12 +18,14 @@ nav{
 	top:0;
 	/*background-color:rgb(30,130,255);*/
 }
+
 .h{
 	background-color: #2bb656;
   	color: white;
   	text-decoration:none;
 	padding:2.5px 0;
 }
+
 nav a:hover {
   
   	background-color:white;
