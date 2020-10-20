@@ -6,73 +6,63 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
   
   <script language="javascript">
-    
-    function Fruits(name, property){
-      this.name= name;
-      this.property = property;
-    }
-    
-    array_fruits = [new Fruits("Mango Madness", "tropical"),
-              new Fruits("Kiwi Karma", "refreshing"),
-              new Fruits("Applepocalypse", "apple"),
-              new Fruits("Orange Oasis", "orange"),
-              new Fruits("Berry Blast", "berries"),
-              new Fruits("blueberry", "berries"),
-              new Fruits("Cranberry Crash", "berries"),
-              new Fruits("Raspberry Rumble", "sour"),
-              new Fruits("Strawberry Banana Supernova", "banana"),
-            ];
-		
-		function getMatch(input_property){
-			result = "";
-			for(var i = 0; i < array_fruits.length; i++){
-				if (array_fruits[i].property == input_property){
-					result = result + array_fruits[i].name + "/ ";    //no .value here
-				}
-			}
-			return result;
-		}
-		
-		document.getElementById("result").innerHTML = getMatch("apple");//45
-		  
     window.onload=function(){
+	    function Fruits(name, property){
+	      this.name= name;
+	      this.property = property;
+	    }
+	    
+	    array_fruits = [new Fruits("Mango Madness", "tropical"),
+	              new Fruits("Kiwi Karma", "refreshing"),
+	              new Fruits("Applepocalypse", "apple"),
+	              new Fruits("Orange Oasis", "orange"),
+	              new Fruits("Berry Blast", "sweet"),
+	              new Fruits("Blueberry Bash", "berries"),
+	              new Fruits("Cranberry Crash", "berries"),
+	              new Fruits("Raspberry Rumble", "sour"),
+	              new Fruits("Strawberry Banana Supernova", "filling"),
+	            ];
+			
+			function getMatch(input_property){
+				result = "";
+				for(var i = 0; i < array_fruits.length; i++){
+					if (array_fruits[i].property == input_property){
+						result = result + array_fruits[i].name + " <br />";    //no .value here
+					}
+				}
+				return result;
+			}
+			
+			// document.getElementById("result").innerHTML = getMatch("apple");//45
+		  
+    
       document.getElementById("show-data").onclick = function(array_fruits){
           array_fruits = array_fruits;
-          have_favFruit = 0;
+          // have_favFruit = 0;
           result = "";
+					result_2 = "";
           
           for (i=0;i < document.form1.favFruit.length; i++) {
             myChkBox = document.form1.favFruit[i];
             if (myChkBox.checked== true){
-              result = "Likes " + myChkBox.value + " <br />";
-              have_favFruit++;	
-							
-							for (j=0; i<array_fruits.length; j++) {
-								document.write(fruits[j].property + " <br />");
-								document.write(fruits[j].property + " <br />");
-								
-								if(fruits[j].property = myChkBox.value){
-									result += "Try " + fruits[j].name + " <br />";
-									document.write(result += "Try " + fruits[j].name + " <br />");
-								}
-							}
-							
+              // have_favFruit++;	
+							result_2 = getMatch(myChkBox.value) + " (preference based on: " + myChkBox.value + ") " + " <br />" + " <br />";					
             }
           }
           
-          if (have_favFruit == 0) {
-            result = "";
+          // if (have_favFruit == 0) {
             for (i=0;i < document.form1.preferTaste.length; i++) {
               myChkBox = document.form1.preferTaste[i];
               if (myChkBox.checked == true){
 								result += "Likes " + myChkBox.value + " <br />";	
-
+								
+								result_2 += getMatch(myChkBox.value) + " (preference based on: " + myChkBox.value + ") " + " <br />" + " <br />";		
 							}
                 
-            }
+            // }
           }
           
-          document.getElementById("fruit-data").innerHTML = result;
+          document.getElementById("fruit-data").innerHTML = "Try: " + " <br />" + result_2;
         }
 
       }
@@ -103,11 +93,10 @@
     <h4>Get your best match.</h2>
     <form name="form1">
       Favoriate fruit? 
-      <input type= "checkbox" value="apple" name="favFruit">Apple
-      <input type= "checkbox" value="orange" name="favFruit">Orange
-      <input type= "checkbox" value="banana" name="favFruit">Banana
-      <input type= "checkbox" value="berries" name="favFruit">Berries
-      <input type= "checkbox" value="surprise" name="favFruit">Surprise me!
+      <input type= "radio" value="apple" name="favFruit">Apple
+      <input type= "radio" value="orange" name="favFruit">Orange
+      <input type= "radio" value="berries" name="favFruit">Berries
+      <input type= "radio" value="surprise" name="favFruit">Surprise me!
       <br><br>
       
       Prefer? <br>
@@ -115,7 +104,7 @@
       <input type= "checkbox" value="sour" name="preferTaste">sour
       <br>
       
-      <input type= "checkbox" value="berry" name="preferTaste">berry
+      <input type= "checkbox" value="berries" name="preferTaste">berries
       <input type= "checkbox" value="tropical" name="preferTaste">tropical
       <br>
       
