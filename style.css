@@ -41,7 +41,7 @@ nav ul li, */
 footer ul li { display: inline; margin-right: 20px; }
 
 nav a:hover {
-	background-color:white;
+	text-decoration: underline;
 	color:#2bb656;
 	
 }
