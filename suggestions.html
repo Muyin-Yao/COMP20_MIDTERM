@@ -23,7 +23,7 @@
               new Fruits("Strawberry Banana Supernova", "banana"),
             ];
 		
-		function getMatch(input_property, array_fruits){
+		function getMatch(input_property){
 			result = "";
 			for(var i = 0; i < array_fruits.length; i++){
 				if (array_fruits[i].property == input_property){
@@ -33,7 +33,7 @@
 			return result;
 		}
 		
-		document.getElementById("result").innerHTML = getMatch("apple", array_fruits);//45
+		document.getElementById("result").innerHTML = getMatch("apple");//45
 		  
     window.onload=function(){
       document.getElementById("show-data").onclick = function(array_fruits){
