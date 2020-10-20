@@ -68,7 +68,7 @@
 
       }
 
-      document.getElementById("show-data").onclick = function(){
+      document.getElementById("show-data").onclick = function(fruits){
           
           have_favFruit = 0;
           result = "";
@@ -85,8 +85,15 @@
             result = "";
             for (i=0;i < document.form1.preferTaste.length; i++) {
               myChkBox = document.form1.preferTaste[i];
-              if (myChkBox.checked == true)
-                result += "Likes " + myChkBox.value + " <br />";	
+              if (myChkBox.checked == true){
+								result += "Likes " + myChkBox.value + " <br />";	
+								for(j=0; i<fruits.length; j++){
+									if(fruits[j].property = myChkBox.value){
+										result += "Try " + fruits[j].name + " <br />";
+									}
+								}
+							}
+                
             }
           }
           
