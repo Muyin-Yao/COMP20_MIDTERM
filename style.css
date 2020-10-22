@@ -46,3 +46,8 @@ nav a:hover {
 
 footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
 
+.shark{
+	display: flex;
+	padding: 0 0 10px 0;
+	justify-content:center;
+}
