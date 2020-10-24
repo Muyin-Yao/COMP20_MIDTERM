@@ -44,13 +44,13 @@
     
       document.getElementById("show-data").onclick = function(array_fruits){
           array_fruits = array_fruits;
-          // have_favFruit = 0;
+          result = "Please select your preference(s) above.";
 					result_2 = "";
           
           for (i=0;i < document.form1.favFruit.length; i++) {
             myChkBox = document.form1.favFruit[i];
             if (myChkBox.checked == true){
-              // have_favFruit++;	
+              result = "";
 							result_2 = getMatch(myChkBox.value) + " (preference based on: " + myChkBox.value + ") " + " <br />" + " <br />";					
             }
           }
@@ -59,27 +59,61 @@
             for (i=0;i < document.form1.preferTaste.length; i++) {
               myChkBox = document.form1.preferTaste[i];
               if (myChkBox.checked == true){
+								result = "";
 								result_2 += getMatch(myChkBox.value) + " (preference based on: " + myChkBox.value + ") " + " <br />" + " <br />";		
 							}
                 
             // }
           }
           
-          document.getElementById("fruit-data").innerHTML = "Try: " + " <br />" + result_2;
+          document.getElementById("fruit-data").innerHTML = result + " <br />" + result_2;
         }
 				
-				document.getElementById("show-input").onclick = function(array_fruits){
+				
+				document.getElementById("show-input").onclick = function(){
+					
+					if (document.form2.user_name.value == ""){
+						alert("Must enter a value for the user name"); // tell user what is wrong
+						document.form2.user_name.focus(); // put cursor in text box
+						document.form2.user_name.select(); // highlight text in the box
+						return false; // prevent form action
+					}
+					if (document.form2.flavor_recommended.value == ""){
+						alert("Must enter a value for flavor recommendation"); // tell user what is wrong
+						document.form2.flavor_recommended.focus(); // put cursor in text box
+						document.form2.flavor_recommended.select(); // highlight text in the box
+						return false; // prevent form action
+					}
+					
 						user_name = document.form2.user_name.value;
 						flavor_recommended = document.form2.flavor_recommended.value;
 
-						result = "User " + user_name + " recommended " + flavor_recommended + ".";
+						result = " <br />" + "User " + user_name + " recommended " + flavor_recommended + ".";
 						
 						document.getElementById("recommend-data").innerHTML = result;
-					}
+				}
+
 
       }
     
   </script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<script>
+		// $(document).ready(function(){
+		//   $("p").click(function(){
+		//     $(this).hide();
+		//   });
+		// });
+		
+		$(document).ready(function(){
+		  $("button").click(function(){
+		    $("#div1").fadeIn();
+		    $("#div2").fadeIn("slow");
+		  });
+		});
+	</script>
 	
 	<style>
 		div.left {
@@ -115,7 +149,7 @@
 	  
     <hr>
 		
-		<div class="left">
+		<div id="div1" class="left">
 	    <h4>Get your best match.</h2>
 	    <form name="form1">
 	      Favoriate fruit? 
@@ -144,34 +178,36 @@
 
 	    </form>
 		
-		
 	    <br>
 	    
 	    <div id="fruit-data" style="height: 100px;"></div>  
 		</div>
 		
 		
-		<div class="right">
+		<div id="div1" class="right">
 			<h4>Any flavors recommended?</h2>
-			<form name="form2">
-				User: 
+			<form name="form2" method="post">
+				User name*: 
 				<input type = "text"	name="user_name" id="user_1">
 				<br />
 				
-				Flavor recommended: 
+				Flavor recommended*: 
 				<input type = "text"	name="flavor_recommended" id="fav_1">
 	      <br />
 				
+				Additional comments for recommendation: 
+				<input type = "text"	name="comments" id="com_1">
+				<br />
+				
+				<br />
+
 	      <input type = "button" value ="submit" id= "show-input"> 
 
 	    </form>
+			<div id="recommend-data"></div>
 			
-			<div id="recommend-data"></div>  
-
-		
-		</form>
-
 		</div>
+		
 	</div>
 	
 
