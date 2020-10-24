@@ -86,7 +86,77 @@
 
     }
     </style>
-	<script>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <meta name='viewport' content="width=device-width, initialscale=1"> -->
+</head>
+<header>
+	<nav>
+	    <a href="index.html"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
+	    <a href="#">contact us</a>
+	    <a href="#">about us</a>
+	    <a href="#">locations</a>
+	    <a href="flavors.html">flavors</a>
+	    <a href="suggestions.html">suggestions</a>
+	    <a href="#">why bruce</a>
+	    <a href="#">recipes</a>
+  </nav>
+</header>
+
+<body>
+    <div class="container">
+        <h1>Order Juice!</h1>
+        <div class = "order">
+            Juice Flavor: <br/>
+        </br/>
+            <form id = "cartform">
+                <div class="custom-select"  style="width:200px;">
+                  <select id = "juice">
+                    <option value="0">Select juice:</option>
+                    <option value="1">Mango Madness</option>
+                    <option value="2">Starfruit Surprise</option>
+                    <option value="3">Kiwi Karma</option>
+                    <option value="4">Applepocalypse</option>
+                    <option value="5">Orange Oasis</option>
+                    <option value="6">Blueberry Bash</option>
+                    <option value="7">Cranberry Crash</option>
+                    <option value="8">Rasperry Rumble</option>
+                    <option value="9">Coconut Calamity</option>
+                    <option value="10">Tangerine Totality</option>
+                    <option value="11">Berry Blast</option>
+                    <option value="12">Strawberry Banana Supernova</option>
+                  </select>
+                </div>
+                <br / />
+                Quantity:<br /><br/>
+                <div class="custom-select"  style="width:60px;">
+                  <select id = "quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <br /><br />
+                <button type = "button" id = "addToCart">Add to Cart</button>
+            </form>
+        </div>
+        <div class = "cart">
+            <h2>Your Shopping Cart:</h2>
+            <div id = "cart-text">
+            </div>
+            <div id = "cart-total">
+            </div>
+        </div>
+    </div>
+<script>
 		
 
 var totalQuant = 0;
@@ -215,75 +285,6 @@ then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
 document.getElementById("addToCart").addEventListener("click",addToCart);
 	</script>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<!-- <meta name='viewport' content="width=device-width, initialscale=1"> -->
-</head>
-<header>
-	<nav>
-	    <a href="index.html"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
-	    <a href="#">contact us</a>
-	    <a href="#">about us</a>
-	    <a href="#">locations</a>
-	    <a href="flavors.html">flavors</a>
-	    <a href="suggestions.html">suggestions</a>
-	    <a href="#">why bruce</a>
-	    <a href="#">recipes</a>
-  </nav>
-</header>
-
-<body>
-    <div class="container">
-        <h1>Order Juice!</h1>
-        <div class = "order">
-            Juice Flavor: <br/>
-        </br/>
-            <form id = "cartform">
-                <div class="custom-select"  style="width:200px;">
-                  <select id = "juice">
-                    <option value="0">Select juice:</option>
-                    <option value="1">Mango Madness</option>
-                    <option value="2">Starfruit Surprise</option>
-                    <option value="3">Kiwi Karma</option>
-                    <option value="4">Applepocalypse</option>
-                    <option value="5">Orange Oasis</option>
-                    <option value="6">Blueberry Bash</option>
-                    <option value="7">Cranberry Crash</option>
-                    <option value="8">Rasperry Rumble</option>
-                    <option value="9">Coconut Calamity</option>
-                    <option value="10">Tangerine Totality</option>
-                    <option value="11">Berry Blast</option>
-                    <option value="12">Strawberry Banana Supernova</option>
-                  </select>
-                </div>
-                <br / />
-                Quantity:<br /><br/>
-                <div class="custom-select"  style="width:60px;">
-                  <select id = "quantity">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
-                </div>
-                <br /><br />
-                <button type = "button" id = "addToCart">Add to Cart</button>
-            </form>
-        </div>
-        <div class = "cart">
-            <h2>Your Shopping Cart:</h2>
-            <div id = "cart-text">
-            </div>
-            <div id = "cart-total">
-            </div>
-        </div>
-    </div>
 </body>
 <footer>
 	<ul>
