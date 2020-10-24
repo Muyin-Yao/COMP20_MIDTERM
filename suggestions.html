@@ -80,6 +80,18 @@
       }
     
   </script>
+	
+	<style>
+		div.left {
+			width: 48%;
+			float: left;
+		}
+
+		div.right {
+			margin-left: 48;
+		}
+		
+	</style>
 
 
 </head>
@@ -98,45 +110,49 @@
 <body>
 
 	
-	<div style="padding-left:20px">
+	<div style="padding-left:30px">
 	  <h1>Bruce's Juices - Suggestions</h1>
 	  
     <hr>
-    <h4>Get your best match.</h2>
-    <form name="form1">
-      Favoriate fruit? 
-      <input type= "radio" value="apple" name="favFruit">Apple
-      <input type= "radio" value="orange" name="favFruit">Orange
-      <input type= "radio" value="berries" name="favFruit">Berries
-      <input type= "radio" value="random" name="favFruit">Surprise me!
-      <br><br>
-      
-      Prefer? <br>
-      <input type= "checkbox" value="sweet" name="preferTaste">sweet
-      <input type= "checkbox" value="sour" name="preferTaste">sour
-      <br>
-      
-      <input type= "checkbox" value="berries" name="preferTaste">berries
-      <input type= "checkbox" value="tropical" name="preferTaste">tropical
-      <br>
-      
-      <input type= "checkbox" value="refreshing" name="preferTaste">refreshing
-      <input type= "checkbox" value="filling" name="preferTaste">filling
-      <br>
-      
-      <br />
-      
-      <input type = "button" value ="Show data" id= "show-data"> 
-      <hr>   
-    </form>
 		
-    <br>
-    
-    <div id="fruit-data"></div>  
+		<div class="left">
+	    <h4>Get your best match.</h2>
+	    <form name="form1">
+	      Favoriate fruit? 
+	      <input type= "radio" value="apple" name="favFruit">Apple
+	      <input type= "radio" value="orange" name="favFruit">Orange
+	      <input type= "radio" value="berries" name="favFruit">Berries
+	      <input type= "radio" value="random" name="favFruit">Surprise me!
+	      <br><br>
+	      
+	      Prefer? <br>
+	      <input type= "checkbox" value="sweet" name="preferTaste">sweet
+	      <input type= "checkbox" value="sour" name="preferTaste">sour
+	      <br>
+	      
+	      <input type= "checkbox" value="berries" name="preferTaste">berries
+	      <input type= "checkbox" value="tropical" name="preferTaste">tropical
+	      <br>
+	      
+	      <input type= "checkbox" value="refreshing" name="preferTaste">refreshing
+	      <input type= "checkbox" value="filling" name="preferTaste">filling
+	      <br>
+	      
+	      <br />
+	      
+	      <input type = "button" value ="Show data" id= "show-data"> 
 
-		<hr> 
+	    </form>
 		
-		<h4>Any flavors recommended?</h2>
+		
+	    <br>
+	    
+	    <div id="fruit-data" style="height: 100px;"></div>  
+		</div>
+		
+		
+		<div class="right">
+			<h4>Any flavors recommended?</h2>
 			<form name="form2">
 				User: 
 				<input type = "text"	name="user_name" id="user_1">
@@ -147,7 +163,7 @@
 	      <br />
 				
 	      <input type = "button" value ="submit" id= "show-input"> 
-	      <hr>   
+
 	    </form>
 			
 			<div id="recommend-data"></div>  
@@ -155,7 +171,7 @@
 		
 		</form>
 
-    
+		</div>
 	</div>
 	
 
