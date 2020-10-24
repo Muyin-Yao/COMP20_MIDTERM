@@ -6,6 +6,83 @@
 	<title>Bruce's Juices - Home</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<!-- <meta name='viewport' content="width=device-width, initialscale=1"> -->
+	
+	<style>
+	
+		.parallax {
+			background-image: url("images/juices_main.jpg");
+			height: 550px; 
+			
+			/* Create the parallax scrolling effect */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		
+		.centered {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			color:#ffffff;
+			transform: translate(-50%, -50%);
+			text-decoration: underline;
+		}
+		
+		.image_parent {
+			height: 300px; 
+			max-width: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 10%;
+		}
+		
+		.image_parent:hover{
+		  -ms-transform: scale(1.05); /* IE 9 */
+		  -webkit-transform: scale(1.05); /* Safari 3-8 */
+		  transform: scale(1.05); 
+		}
+		
+		.card {
+			align-self: auto;
+			flex-grow: 4;
+			width: 45%;
+			padding: 10px;
+			display: inline-block;
+			margin: auto;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+			/* font-family: arial; */
+			border-radius: 10%;
+		}
+		
+		.cardContainer{
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			display:flex;
+			flex-wrap: wrap;
+		}
+		
+		@media only screen and (max-device-width: 991px) {
+			.parallax {
+				height: 400px; 
+				background-attachment: scroll;
+			}
+			.centered {
+				position: absolute;
+				top: 20px;
+				left: 50%;
+				color:#000000;
+				opacity: 0;
+			}
+		}
+		
+	</style>
+	
+	
 </head>
 <header>
 	<nav>
@@ -27,12 +104,77 @@
   	</nav>
 </header>
 <body>
-	<div class = "container" style="height:10000px;"></div>
+	
+	<div class="parallax"></div>
+	
+	<div class="centered">
+		<h1 style="font-family:Helvetica, sans-serif; font-size: 6em;" >
+		BRUCE'S <br> JUICES
+		</h1>
+	</div>
+	
+	<br><br><br><br><br>
+	
+	<div class = "container" style = "text-align: center;">
+		<h1>Welcome to Bruce's Juices!</h1>
+		<p>Here at Bruce's Juices...</p>
+		<p>Please check out our <a href="#">menu</a> here!</p>
+		<p>Having a hard time deciding what to order? Get your best <a href="#">match</a> here!</p>
+		<p><a href="#">Contact us</a> for more information!</p>
+	</div>
+	
+	<br><br><br><br><br>
+	
+	<div class = "container">
+		<div class="card">
+			<a href="about.html"><div class="image_parent" style="background-image: url('images/juice_girl.jpg');"></div></a>
+			<h2> About Us </h2>
+			<p> Click the image above to check out more about us. </p>
+		</div>
+		
+		<div class="card">
+			<a href="flavors.html"><div class="image_parent" style="background-image: url('images/fruits.jpg');"></div></a>
+			<h2> Flavors </h2>
+			<p> Click the image above to check out our featuring flavors.</p>
+		</div>
+		
+		<div class="card">
+			<a href="locations.html"><div class="image_parent" style="background-image: url('images/juice_kids.jpg');"></div></a>
+			<h2> Suggestions </h2>
+			<p> Click the image above...</p>
+		</div>
+
+		<div class="card">
+			<a href="suggestions.html"><div class="image_parent" style="background-image: url('images/location_store.jpg');"></div></a>
+			<h2> Location  </h2>
+			<p> Click the image above...</p>
+		</div>
+		
+		<div class="card">
+			<a href="flavors.html"><div class="image_parent" style="background-image: url('images/FinalLogo.png');"></div></a>
+			<h2> something </h2>
+			<p> something</p>
+		</div>
+		
+		<div class="card">
+			<a href="flavors.html"><div class="image_parent" style="background-image: url('images/FinalLogo.png');"></div></a>
+			<h2> something </h2>
+			<p> something</p>
+		</div>
+
+		<div class="card">
+			<a href="flavors.html"><div class="image_parent" style="background-image: url('images/FinalLogo.png');"></div></a>
+			<h2> something </h2>
+			<p> something</p>
+		</div>
+	
+		<footer>
+			<ul>
+				<li><a href="#">Email</a></li>
+				<li><a href="#">Feedback</a></li>
+			</ul>
+		</footer>
+	
+	</div>
 
 </body>
-<footer>
-	<ul>
-		<li><a href="#">Email</a></li>
-		<li><a href="#">Feedback</a></li>
-	</ul>
-</footer>

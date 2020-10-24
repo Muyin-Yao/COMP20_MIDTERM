@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bruce's Juices - Home</title>
+    <style>
+    /* The container must be positioned relative: */
+    .custom-select {
+      height: 100%;
+      position: relative;
+      font-family: Arial;
+    }
+
+    .custom-select select {
+      display: none; /*hide original SELECT element: */
+    }
+
+    .select-selected {
+      background-color: #2bb656;
+    }
+
+    /* Style the arrow inside the select element: */
+    .select-selected:after {
+      position: absolute;
+      content: "";
+      top: 14px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: #fff transparent transparent transparent;
+    }
+
+    /* Point the arrow upwards when the select box is open (active): */
+    .select-selected.select-arrow-active:after {
+      border-color: transparent transparent #fff transparent;
+      top: 7px;
+    }
+
+    /* style the items (options), including the selected item: */
+    .select-items div,.select-selected {
+      color: #ffffff;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+    }
+
+    /* Style items (options): */
+    .select-items {
+      position: absolute;
+      background-color: #2bb656;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+
+    /* Hide the items when the select box is closed: */
+    .select-hide {
+      display: none;
+    }
+
+    .select-items div:hover, .same-as-selected {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    .order{
+        width:40%;
+        font-size: 1.3em;
+        display: inline-block;
+        border-style: solid;
+        border-width: 20px;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 100px;
+    }
+    .cart{
+        width:30%;
+        display:inline-block;
+        border-style: solid;
+        border-width: 20px;
+        border-radius: 15px;
+        vertical-align: top;
+        margin-left: 10%;
+        padding: 20px;
+
+    }
+    </style>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <meta name='viewport' content="width=device-width, initialscale=1"> -->
+</head>
+<header>
+	<nav>
+	    <a href="index.html"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
+	    <a href="#">contact us</a>
+	    <a href="#">about us</a>
+	    <a href="#">locations</a>
+	    <a href="flavors.html">flavors</a>
+	    <a href="suggestions.html">suggestions</a>
+	    <a href="#">why bruce</a>
+	    <a href="#">recipes</a>
+  </nav>
+</header>
+
+<body>
+    <div class="container">
+        <h1>Order Juice!</h1>
+        <div class = "order">
+            Juice Flavor: <br/>
+        </br/>
+            <form id = "cartform">
+                <div class="custom-select"  style="width:200px;">
+                  <select id = "juice">
+                    <option value="0">Select juice:</option>
+                    <option value="1">Mango Madness</option>
+                    <option value="2">Starfruit Surprise</option>
+                    <option value="3">Kiwi Karma</option>
+                    <option value="4">Applepocalypse</option>
+                    <option value="5">Orange Oasis</option>
+                    <option value="6">Blueberry Bash</option>
+                    <option value="7">Cranberry Crash</option>
+                    <option value="8">Rasperry Rumble</option>
+                    <option value="9">Coconut Calamity</option>
+                    <option value="10">Tangerine Totality</option>
+                    <option value="11">Berry Blast</option>
+                    <option value="12">Strawberry Banana Supernova</option>
+                  </select>
+                </div>
+                <br / />
+                Quantity:<br /><br/>
+                <div class="custom-select"  style="width:60px;">
+                  <select id = "quantity">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <br /><br />
+                <button type = "button" id = "addToCart">Add to Cart</button>
+            </form>
+        </div>
+        <div class = "cart">
+            <h2>Your Shopping Cart:</h2>
+            <div id = "cart-text">
+            </div>
+            <div id = "cart-total">
+            </div>
+        </div>
+    </div>
+<script>
+		
+
+var totalQuant = 0;
+var itemsInCart = false;
+
+/* for resetting form when item is added to cart */
+function resetSelect(elem) {
+    elem.selectedIndex = 0;
+}
+
+/* handles getting flavor and quantity of item and adds it
+to the cart - then resets form */
+function addToCart(){
+
+    if(!itemsInCart) itemsInCart = true;
+
+    var flavorbox = document.getElementById("juice");
+    var quantbox = document.getElementById("quantity");
+
+    var flavor = flavorbox.options[flavorbox.selectedIndex].text;
+    var quantity = quantbox.options[quantbox.selectedIndex].text;
+
+
+    totalQuant += parseInt(quantity);
+
+    var tag = document.createElement("p");
+    tag.setAttribute('class', 'cart-item');
+    var text = document.createTextNode("Quantity: "+quantity+"   Item: "+flavor);
+    tag.appendChild(text);
+
+    var div = document.getElementById("cart-text");
+    div.appendChild(tag);
+
+    var total = document.getElementById("cart-total");
+    total.innerHTML = "Cart Total (Before Tax) : $"+(10 * totalQuant) +".00";
+
+    document.getElementById("cartform").reset();
+    resetSelect(flavorbox);
+    resetSelect(quantbox);
+}
+
+
+
+/* FROM TUTORIAL WEBSITE - NOT ORIGINAL CODE!!! */
+function setupSelect(){
+    var x, i, j, l, ll, selElmnt, a, b, c;
+    /* Look for any elements with the class "custom-select": */
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    for (i = 0; i < l; i++) {
+      selElmnt = x[i].getElementsByTagName("select")[0];
+      ll = selElmnt.length;
+      /* For each element, create a new DIV that will act as the selected item: */
+      a = document.createElement("DIV");
+      a.setAttribute("class", "select-selected");
+      a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+      x[i].appendChild(a);
+      /* For each element, create a new DIV that will contain the option list: */
+      b = document.createElement("DIV");
+      b.setAttribute("class", "select-items select-hide");
+      for (j = 1; j < ll; j++) {
+        /* For each option in the original select element,
+        create a new DIV that will act as an option item: */
+        c = document.createElement("DIV");
+        c.innerHTML = selElmnt.options[j].innerHTML;
+        c.addEventListener("click", function(e) {
+            /* When an item is clicked, update the original select box,
+            and the selected item: */
+            var y, i, k, s, h, sl, yl;
+            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+            sl = s.length;
+            h = this.parentNode.previousSibling;
+            for (i = 0; i < sl; i++) {
+              if (s.options[i].innerHTML == this.innerHTML) {
+                s.selectedIndex = i;
+                h.innerHTML = this.innerHTML;
+                y = this.parentNode.getElementsByClassName("same-as-selected");
+                yl = y.length;
+                for (k = 0; k < yl; k++) {
+                  y[k].removeAttribute("class");
+                }
+                this.setAttribute("class", "same-as-selected");
+                break;
+              }
+            }
+            h.click();
+        });
+        b.appendChild(c);
+      }
+      x[i].appendChild(b);
+      a.addEventListener("click", function(e) {
+        /* When the select box is clicked, close any other select boxes,
+        and open/close the current select box: */
+        e.stopPropagation();
+        closeAllSelect(this);
+        this.nextSibling.classList.toggle("select-hide");
+        this.classList.toggle("select-arrow-active");
+      });
+    }
+}
+function closeAllSelect(elmnt) {
+  /* A function that will close all select boxes in the document,
+  except the current select box: */
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+
+setupSelect();
+/* If the user clicks anywhere outside the select box,
+then close all select boxes: */
+document.addEventListener("click", closeAllSelect);
+document.getElementById("addToCart").addEventListener("click",addToCart);
+	</script>
+</body>
+<footer>
+	<ul>
+		<li><a href="#">Email</a></li>
+		<li><a href="#">Feedback</a></li>
+	</ul>
+</footer>
