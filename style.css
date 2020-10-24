@@ -95,11 +95,13 @@ footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
 .contact-form{
     color: #121621;
 }
+
 @media screen and (max-width: 1260px) {
   .contact-header {
     border: 0;
   }
 }
+
 .locations {
     width:50%;
     height: 40%;
@@ -198,6 +200,7 @@ footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 .order{
     width:40%;
     font-size: 1.3em;
