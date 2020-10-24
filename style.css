@@ -54,3 +54,167 @@ footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
 	padding: 0 0 10px 0;
 	justify-content:center;
 }
+
+/*BEGIN MILO CSS*/
+.contact {
+    width:50%;
+    height: 40%;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+.contact-header{
+    display: inline;
+    font-size: 2.5em;
+    width: 45%;
+    text-align: center;
+    border: 1px solid #121621;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+}
+.contact-text{
+    display: inline;
+    font-size: 1.5em;
+    text-align: left;
+    color: #53487f;
+}
+.contact-pic{
+    display: inline-block;
+    width: 45%;
+    height:40%;
+    background: url(images/blue_purple.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-bottom: 56%;
+    vertical-align: top;
+    border-radius: 25px;
+}
+.contact-form{
+    color: #121621;
+}
+@media screen and (max-width: 1260px) {
+  .contact-header {
+    border: 0;
+  }
+}
+.locations {
+    width:50%;
+    height: 40%;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+.locations-header{
+    display: inline;
+    font-size: 2.5em;
+    width: 45%;
+    text-align: center;
+    border: 1px solid #121621;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.locations-text{
+    display: inline;
+    font-size: 1.5em;
+    text-align: left;
+    color: #a21b1b;
+}
+
+.locations-pic{
+    display: inline-block;
+    width: 45%;
+    height:40%;
+    background: url(images/locations-pic.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-bottom: 56%;
+    vertical-align: top;
+    border-radius: 25px;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  height: 100%;
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #2bb656;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #2bb656;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.order{
+    width:40%;
+    font-size: 1.3em;
+    display: inline-block;
+    border-style: solid;
+    border-width: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+.cart{
+    width:30%;
+    display:inline-block;
+    border-style: solid;
+    border-width: 20px;
+    border-radius: 15px;
+    vertical-align: top;
+    margin-left: 10%;
+    padding: 20px;
+
+}
