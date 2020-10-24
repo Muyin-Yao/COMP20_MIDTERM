@@ -23,7 +23,7 @@
         display: inline-block;
         margin: auto;
         margin-right: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         text-align: center;
         border: 3px solid #2bb656;
         border-radius: 10%;
@@ -36,8 +36,12 @@
         flex-direction: row;
       }
       
-      h1{
-        font-size: 2em;
+      @media only screen and (max-device-width: 991px) {
+        .card {
+          width: 100%;
+          margin-right: 0px;
+          margin-bottom: 30px;
+        }
       }
       
     </style>
