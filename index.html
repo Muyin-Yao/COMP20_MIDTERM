@@ -12,7 +12,7 @@
 		.parallax {
 			background-image: url("images/juices_main.jpg");
 			height: 550px; 
-
+			
 			/* Create the parallax scrolling effect */
 			background-attachment: fixed;
 			background-position: center;
@@ -26,18 +26,22 @@
 			left: 50%;
 			color:#ffffff;
 			transform: translate(-50%, -50%);
+			text-decoration: underline;
 		}
 		
-		.image {
+		.image_parent {
 			height: 300px; 
 			max-width: 100%;
-			float: left;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 10%;
 		}
 		
-		.box {
+		.card {
 			align-self: auto;
 			flex-grow: 4;
-			max-width: 280px;
+			width: 280px;
 			padding: 10px;
 			display: inline-block;
 			margin: auto;
@@ -45,14 +49,17 @@
 			margin-bottom: 20px;
 			text-align: center;
 			font-family: arial;
-			border: 3px solid #2bb656;
+			/* border: 3px solid #2bb656; */
+			border-radius: 10%;
 		}
 		
 		.cardContainer{
+			width: 100%;
 			justify-content: center;
 			display:flex;
 			flex-wrap: wrap;
 		}
+		
 	</style>
 	
 	
@@ -85,9 +92,26 @@
 		<p>Please check out our <a href="#">menu</a> here!</p>
 		<p>Having a hard time deciding what to order? Get your best <a href="#">match</a> here!</p>
 		<p><a href="#">Contact us</a> for more information!</p>
-  
 
+		<div class="card">
+			<div class="image_parent" style="background-image: url('images/juice_kids.jpg');"></div>
+			<h2> About us </h2>
+		</div>
+		
+		<div class="card">
+			<div class="image_parent" style="background-image: url('images/juice_girl.jpg');"></div>
+			<h2> Order </h2>
+		</div>
+		
+		<div class="card">
+			<div class="image_parent" style="background-image: url('images/Raspberry.jpg');"></div>
+			<h2> Location </h2>
+		</div>
 
+		<div class="card">
+			<div class="image_parent" style="background-image: url('images/fruits.jpg');"></div>
+			<h2> Location </h2>
+		</div>
 	
 	</div>
 
