@@ -38,10 +38,16 @@
 			border-radius: 10%;
 		}
 		
+		.image_parent:hover{
+		  -ms-transform: scale(1.1); /* IE 9 */
+		  -webkit-transform: scale(1.1); /* Safari 3-8 */
+		  transform: scale(1.1); 
+		}
+		
 		.card {
 			align-self: auto;
 			flex-grow: 4;
-			width: 45%;
+			width: 520px;
 			padding: 10px;
 			display: inline-block;
 			margin: auto;
@@ -86,31 +92,37 @@
 		</h1>
 	</div>
 	
-	<div class = "container">
-		<h1 style = "text-align: center;">Welcome to Bruce's Juices!</h1>
+	<div class = "container" style = "text-align: center;">
+		<h1>Welcome to Bruce's Juices!</h1>
 		<p>Here at Bruce's Juices...</p>
 		<p>Please check out our <a href="#">menu</a> here!</p>
 		<p>Having a hard time deciding what to order? Get your best <a href="#">match</a> here!</p>
 		<p><a href="#">Contact us</a> for more information!</p>
-
+	</div>
+	
+	<div class = "container">
 		<div class="card">
-			<div class="image_parent" style="background-image: url('images/juice_kids.jpg');"></div>
-			<h2> <a href="#">About Us</a> </h2>
+			<a href="about.html"><div class="image_parent" style="background-image: url('images/juice_girl.jpg');"></div></a>
+			<h2> About Us </h2>
+			<p> Click the image above to check out more about us. </p>
 		</div>
 		
 		<div class="card">
-			<div class="image_parent" style="background-image: url('images/juice_girl.jpg');"></div>
-			<h2> <a href="#">Order</a> </h2>
+			<a href="flavors.html"><div class="image_parent" style="background-image: url('images/fruits.jpg');"></div></a>
+			<h2> Flavors </h2>
+			<p> Click the image above to check out our featuring flavors.</p>
 		</div>
 		
 		<div class="card">
-			<div class="image_parent" style="background-image: url('images/Raspberry.jpg');"></div>
-			<h2> <a href="#">Location</a>  </h2>
+			<a href="locations.html"><div class="image_parent" style="background-image: url('images/juice_kids.jpg');"></div></a>
+			<h2> Suggestions </h2>
+			<p> Click the image above...</p>
 		</div>
 
 		<div class="card">
-			<div class="image_parent" style="background-image: url('images/fruits.jpg');"></div>
-			<h2> <a href="#">Location</a>  </h2>
+			<a href="suggestions.html"><div class="image_parent" style="background-image: url('images/Raspberry.jpg');"></div></a>
+			<h2> Location  </h2>
+			<p> Click the image above...</p>
 		</div>
 	
 	</div>
