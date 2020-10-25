@@ -6,6 +6,17 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+    
+      button {
+        background-color: #2bb656; 
+        color: white;
+        border: none;
+        padding: 8px 30px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      
       .image_parent {
  			  height: 300px; 
         max-width: 100%;
@@ -16,22 +27,23 @@
  			}
       
       .card {
-        align-self: auto;
-        flex-grow: 0;
+        align-self: flex-start;
+        flex-grow: 4;
         width: 28%;
+        height: auto;
         padding: 10px;
         display: inline-block;
-        margin: auto;
         margin-right: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 50px; 
         text-align: center;
         border: 3px solid #2bb656;
         border-radius: 10%;
       }
       
       .cardContainer{
-        align-items: center;
-  			justify-content: center;
+        display: flex;
+        align-items: flex-start;
+  			justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
       }
@@ -55,17 +67,155 @@
       
     </style>
     
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
-        $("#hide").click(function(){
-          $("p").hide();
+        
+        $("#p_1").hide();
+        $("#hide_1").hide();
+        $("#show_1").click(function(){
+          $("#p_1").show();
+          $("#hide_1").show();
+          $("#show_1").hide();
         });
-        $("#show").click(function(){
-          $("p").show();
+        $("#hide_1").click(function(){
+          $("#p_1").hide();
+          $("#hide_1").hide();
+          $("#show_1").show();
         });
+        
+        $("#p_2").hide();
+        $("#hide_2").hide();
+        $("#show_2").click(function(){
+          $("#p_2").show();
+          $("#hide_2").show();
+          $("#show_2").hide();
+        });
+        $("#hide_2").click(function(){
+          $("#p_2").hide();
+          $("#hide_2").hide();
+          $("#show_2").show();
+        });
+        
+        $("#p_3").hide();
+        $("#hide_3").hide();
+        $("#show_3").click(function(){
+          $("#p_3").show();
+          $("#hide_3").show();
+          $("#show_3").hide();
+        });
+        $("#hide_3").click(function(){
+          $("#p_3").hide();
+          $("#hide_3").hide();
+          $("#show_3").show();
+        });
+        
+        $("#p_4").hide();
+        $("#hide_4").hide();
+        $("#show_4").click(function(){
+          $("#p_4").show();
+          $("#hide_4").show();
+          $("#show_4").hide();
+        });
+        $("#hide_4").click(function(){
+          $("#p_4").hide();
+          $("#hide_4").hide();
+          $("#show_4").show();
+        });
+        
+        $("#p_5").hide();
+        $("#hide_5").hide();
+        $("#show_5").click(function(){
+          $("#p_5").show();
+          $("#hide_5").show();
+          $("#show_5").hide();
+        });
+        $("#hide_5").click(function(){
+          $("#p_5").hide();
+          $("#hide_5").hide();
+          $("#show_5").show();
+        });
+        
+        $("#p_6").hide();
+        $("#hide_6").hide();
+        $("#show_6").click(function(){
+          $("#p_6").show();
+          $("#hide_6").show();
+          $("#show_6").hide();
+        });
+        $("#hide_6").click(function(){
+          $("#p_6").hide();
+          $("#hide_6").hide();
+          $("#show_6").show();
+        });
+        
+        $("#p_7").hide();
+        $("#hide_7").hide();
+        $("#show_7").click(function(){
+          $("#p_7").show();
+          $("#hide_7").show();
+          $("#show_7").hide();
+        });
+        $("#hide_7").click(function(){
+          $("#p_7").hide();
+          $("#hide_7").hide();
+          $("#show_7").show();
+        });
+        
+        $("#p_8").hide();
+        $("#hide_8").hide();
+        $("#show_8").click(function(){
+          $("#p_8").show();
+          $("#hide_8").show();
+          $("#show_8").hide();
+        });
+        $("#hide_8").click(function(){
+          $("#p_8").hide();
+          $("#hide_8").hide();
+          $("#show_8").show();
+        });
+        
+        $("#p_9").hide();
+        $("#hide_9").hide();
+        $("#show_9").click(function(){
+          $("#p_9").show();
+          $("#hide_9").show();
+          $("#show_9").hide();
+        });
+        $("#hide_9").click(function(){
+          $("#p_9").hide();
+          $("#hide_9").hide();
+          $("#show_9").show();
+        });
+        
+        $("#p_10").hide();
+        $("#hide_10").hide();
+        $("#show_10").click(function(){
+          $("#p_10").show();
+          $("#hide_10").show();
+          $("#show_10").hide();
+        });
+        $("#hide_10").click(function(){
+          $("#p_10").hide();
+          $("#hide_10").hide();
+          $("#show_10").show();
+        });
+        
+        $("#p_11").hide();
+        $("#hide_11").hide();
+        $("#show_11").click(function(){
+          $("#p_11").show();
+          $("#hide_11").show();
+          $("#show_11").hide();
+        });
+        $("#hide_11").click(function(){
+          $("#p_11").hide();
+          $("#hide_11").hide();
+          $("#show_11").show();
+        });
+        
       });
-    </script> -->
+    </script>
 
 </head>
 
@@ -86,41 +236,172 @@
   <div class="container">
     <h1>Bruce's Juices - Juice Flavors</h1>
     <div class="cardContainer">
+      
+      <div class="card">
+        <div class="image_parent" style="background-image: url('images/Mango.jpg');"></div>
+        <h2> Mango Madness </h2>
+        <button id="show_1">Show more...</button>
+        <button id="hide_1">Hide</button>
+        <p id = "p_1">Imagine you’re in a desert town at the turn of the millenia in the 
+          year 1000. You’ve traveled many miles, and your tongue is as dry 
+          as sandpaper. You haven’t drunk water in two days, and you can feel 
+          your throat starting to lose hope. But you turn a corner, and 
+          a woman in a purple gown ushers you to a marketplace, and you can’t 
+          believe it isn’t a mirage. Mangoes - thousands of them - with 
+          glorious moisture and bursting with flavor!
+        </p>
+      </div>
+      
       <div class="card">
         <div class="image_parent" style="background-image: url('images/kiwi.jpg');"></div>
         <h2> Kiwi Karma </h2>
+        <button id="show_2">Show more...</button>
+        <button id="hide_2">Hide</button>
+        <p id = "p_2">You’re sitting in traffic, just trying to get home 
+          after a long day at work. A millennial in a bright red Mustang cuts 
+          you off - clearly having zero respect for the rule of law or the 
+          well-being of the community. However, you see an enormous kiwi 
+          rolling down the side of the hill towards the Mustang, 
+          and it takes the millenial out. Boom! Kiwi Karma.
+        </p>
       </div>
 
       <div class="card">
         <div class="image_parent" style="background-image: url('images/Apple.jpg');"></div>
         <h2> Applepocalypse </h2>
+        <button id="show_3">Show more...</button>
+        <button id="hide_3">Hide</button>
+        <p id = "p_3">That Tuesday started off like any other. You forgot your
+           school lunch at home, and you got called to the office when 
+           your parents dropped it off. Your whole class murmured “Ooooooh” 
+           thinking that you were in trouble. But really, everyone was in 
+           trouble. Right as the bell for recess rang, 
+          apples began to fall from the sky. Applepocalypse!
+        </p>
       </div>
 
       <div class="card">
         <div class="image_parent" style="background-image: url('images/Orange.jpg');"></div>
         <h2> Orange Oasis </h2>
+        <button id="show_4">Show more...</button>
+        <button id="hide_4">Hide</button>
+        <p id = "p_4">Imagine you’re in a desert town at the turn of the millenia in the 
+          year 1000. You’ve traveled many miles, and your tongue is as dry 
+          as sandpaper. You haven’t drunk water in two days, and you can feel 
+          your throat starting to lose hope. But you turn a corner, and 
+          a woman in a purple gown ushers you to a marketplace, and you can’t 
+          believe it isn’t a mirage. Mangoes - thousands of them - with 
+          glorious moisture and bursting with flavor!
+        </p>
       </div>
 
       <div class="card">
         <div class="image_parent" style="background-image: url('images/Blueberry.jpg');"></div>
         <h2> Blueberry Bash </h2>
+        <button id="show_5">Show more...</button>
+        <button id="hide_5">Hide</button>
+        <p id = "p_5">It’s 2007. Taylor Swift is still leading the Top 40. 
+          Your friend invites you to a party in her friend Jeff’s apartment, 
+          which is a little small but should be fine for a small gathering 
+          like this.  You dress up as you normally would, but upon entering, 
+          everyone turns to you in disgust at your button-up shirt and khakis. 
+          “Didn’t you get the memo?” Jeff says, “It’s a Blueberry Bash!” 
+          You realize in embarrassment that they’re all wearing blueberry 
+          suits - like the one from Charlie and the Chocolate Factory.
+        </p>
       </div>
 
       <div class="card">
         <div class="image_parent" style="background-image: url('images/Raspberry.jpg');"></div>
         <h2> Raspberry Rumble </h2>
+        <button id="show_6">Show more...</button>
+        <button id="hide_6">Hide</button>
+        <p id = "p_6">California has always been prone to earthquakes, 
+          but you weren’t expecting this when you moved to San Francisco
+           with your college boyfriend back in ‘98. Glasses shatter and 
+           plates break as your entire apartment building shifts back and 
+           forth. You seek cover in the shelter downstairs, and your neighbor 
+           offers you a package of soothing raspberries. “Raspberries?” you 
+           ask. “Why now?” “I don’t know -” She responds, “It’s just this 
+           tradition we’ve had in this building forever. We call it the 
+           Raspberry Rumble.”
+        </p>
       </div>
 
       <div class="card">
         <div class="image_parent" style="background-image: url('images/Coconut.jpg');"></div>
         <h2> Coconut Calamity </h2>
+        <button id="show_7">Show more...</button>
+        <button id="hide_7">Hide</button>
+        <p id = "p_7">A celebrity chef investigates your store, and finds a 
+          stash of coconuts that you completely forgot about. You curse under 
+          your breath - you know they’re rotten. 
+          He turns to you in disgust “This is a Coconut Calamity!”
+        </p>
+      </div>
+      
+      <div class="card">
+        <div class="image_parent" style="background-image: url('images/starfruit.jpg');"></div>
+        <h2> Starfruit Surprise </h2>
+        <button id="show_11">Show more...</button>
+        <button id="hide_11">Hide</button>
+        <p id = "p_11">It’s your first time in Southeast Asia. You’re supposed 
+          to meet your distant relative at this cafe, but a shady man whisks 
+          you away to a room in the back. “You wanna try some of this?” he says. 
+          He turns around and offers you a ripe starfruit.
+        </p>
       </div>
 
       <div class="card">
         <div class="image_parent" style="background-image: url('images/Tangerine.jpg');"></div>
         <h2> Tangerine Totality </h2>
+        <button id="show_8">Show more...</button>
+        <button id="hide_8">Hide</button>
+        <p id = "p_8">You and your surfer buds pull up to the Santa Cruz 
+          beach, and hit the waves, which are especially large for this time
+          of year. Out of nowhere, a plane flies low overhead and airdrops
+          a collection of tangerines into the water. “This is gnarly, bro!” 
+          you say, scooping one out of the blue sea. “Tangerine Totality!”
+        </p>
       </div>
     </div>
+    
+    <div class="card">
+      <div class="image_parent" style="background-image: url('images/Berries.jpg');"></div>
+      <h2> Berry Blast </h2>
+      <button id="show_9">Show more...</button>
+      <button id="hide_9">Hide</button>
+      <p id = "p_9">Everyone’s forgotten about your birthday. No one at 
+        work seemed to remember it, and even your wife hasn’t mentioned it 
+        at all, much less your kids. You start to question your life decisions. 
+        But then you get home, and the lights turn on all of a sudden. 
+        “Surprise!” all of your closest friends and family scream. 
+        They smack a plateful of berries into your face in celebration. 
+        (It would be a cake, 
+        but you were diagnosed with lactose intolerance three years ago).
+      </p>
+    </div>
+    
+    <div class="card">
+      <div class="image_parent" style="background-image: url('images/strawberry_banana.jpg');"></div>
+      <h2> Straw-banana Supernova </h2>
+      <button id="show_10">Show more...</button>
+      <button id="hide_10">Hide</button>
+      <p id = "p_10">In a place before time and space, there was a single 
+        strawberry with the mass of the entire universe. A banana grew 
+        from it. Their masses were then so large that they began to orbit 
+        one another at the greatest speed ever measured. They crashed into 
+        one another, somehow creating a supernova and giving birth to all 
+        things. Accordingly, scientists have called it 
+        the Strawberry Banana Supernova to this day.
+      </p>
+    </div>
+    
+
+    
+
+    
+  </div>
   
   </div>
 </body>
