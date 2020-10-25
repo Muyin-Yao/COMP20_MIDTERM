@@ -5,6 +5,8 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<title>Bruce's Juices - Home</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet">
+
 	<!-- <meta name='viewport' content="width=device-width, initialscale=1"> -->
 	
 	<style>
@@ -22,11 +24,13 @@
 		
 		.centered {
 			position: absolute;
-			top: 50%;
+			top: 55%;
 			left: 50%;
 			color:#ffffff;
 			transform: translate(-50%, -50%);
-			text-decoration: underline;
+			border-color: #ffffff;
+			border-style: solid;
+			border-width: thick;
 		}
 		
 		.image_parent {
@@ -60,7 +64,7 @@
 		
 		.cardContainer{
 			width: 100%;
-			align-items: center;
+			align-items: flex-start;
 			justify-content: center;
 			display:flex;
 			flex-wrap: wrap;
@@ -108,9 +112,11 @@
 	<div class="parallax"></div>
 	
 	<div class="centered">
-		<h1 style="font-family:Helvetica, sans-serif; font-size: 6em;" >
-		BRUCE'S <br> JUICES
-		</h1>
+		<!-- <h1 style="font-family:Helvetica, sans-serif; font-size: 6em; 
+		text-decoration: underline;" >
+			BRUCE'S <br> JUICES
+		</h1> -->
+		<img src="images\LogoTransparent.png" alt="LogoTransparent" width="380">
 	</div>
 	
 	<br><br><br><br><br>
@@ -129,43 +135,38 @@
 		<div class="card">
 			<a href="about.html"><div class="image_parent" style="background-image: url('images/juice_girl.jpg');"></div></a>
 			<h2> About Us </h2>
-			<p> Click the image above to check out more about us. </p>
+			<p> Click the image above to learn more about us. We've also got a good story
+				to tell about our founder, Bruce the shark...</p>
 		</div>
 		
 		<div class="card">
 			<a href="flavors.html"><div class="image_parent" style="background-image: url('images/fruits.jpg');"></div></a>
 			<h2> Flavors </h2>
-			<p> Click the image above to check out our featuring flavors.</p>
+			<p> Click the image above to check out our featuring flavors and the stories
+				behind each flavor...</p>
 		</div>
 		
 		<div class="card">
-			<a href="locations.html"><div class="image_parent" style="background-image: url('images/juice_kids.jpg');"></div></a>
+			<a href="suggestions.html"><div class="image_parent" style="background-image: url('images/juice_kids.jpg');"></div></a>
 			<h2> Suggestions </h2>
-			<p> Click the image above...</p>
+			<p> Having a hard time deciding what to order? We can help you find your best match 
+				based on your preferences! We also appreciate flaver ideas from our customers!
+			</p>
 		</div>
 
 		<div class="card">
-			<a href="suggestions.html"><div class="image_parent" style="background-image: url('images/location_store.jpg');"></div></a>
+			<a href="locations.html"><div class="image_parent" style="background-image: url('images/location_store.jpg');"></div></a>
 			<h2> Location  </h2>
 			<p> Click the image above...</p>
 		</div>
-		
-		<div class="card">
-			<a href="flavors.html"><div class="image_parent" style="background-image: url('images/FinalLogo.png');"></div></a>
-			<h2> something </h2>
-			<p> something</p>
-		</div>
-		
-		<div class="card">
-			<a href="flavors.html"><div class="image_parent" style="background-image: url('images/FinalLogo.png');"></div></a>
-			<h2> something </h2>
-			<p> something</p>
-		</div>
 
 		<div class="card">
-			<a href="flavors.html"><div class="image_parent" style="background-image: url('images/FinalLogo.png');"></div></a>
-			<h2> something </h2>
-			<p> something</p>
+			<a href="info.html"><div class="image_parent" style="background-image: url('images/service.jpg');"></div></a>
+			<h2> Contact Us </h2>
+			<p> We appreciate each and every one of our customers. That's why
+			if you have any questions and concerns regarding the quality
+			of our products or of our services, we highly recommend that
+			you reach out to us...</p>
 		</div>
 	
 		<footer>
