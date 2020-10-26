@@ -90,7 +90,7 @@
 						user_name = document.form2.user_name.value;
 						flavor_recommended = document.form2.flavor_recommended.value;
 
-						result = " <br />" + "User " + user_name + " recommended " + flavor_recommended + ".";
+						result = " <br />" + user_name + " recommended " + flavor_recommended + ".";
 						
 						document.getElementById("recommend-data").innerHTML = result;
 				}
@@ -126,8 +126,6 @@
 <header>
   <nav>
     	<a href="index.html" style="align-self:flex-start;"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
-		<div></div>
-		<div></div>
 	    <a href="info.html">contact us</a>
 	    <a href="about.html">about us</a>
 	    <div class="dropdown">
@@ -152,16 +150,16 @@
     <hr>
 		
 		<div id="div1" class="left">
-	    <h4>Get your best match.</h2>
+	    <h2>Get your best match.</h2>
 	    <form name="form1">
-	      Favoriate fruit? 
-	      <input type= "radio" value="apple" name="favFruit">Apple
-	      <input type= "radio" value="orange" name="favFruit">Orange
-	      <input type= "radio" value="berries" name="favFruit">Berries
-	      <input type= "radio" value="random" name="favFruit">Surprise me!
+	      Pick your favorite fruit:<br>
+	      <input type= "radio" value="apple" name="favFruit">apple<br>
+	      <input type= "radio" value="orange" name="favFruit">orange<br>
+	      <input type= "radio" value="berries" name="favFruit">berries<br>
+	      <input type= "radio" value="random" name="favFruit">surprise me!
 	      <br><br>
 	      
-	      Prefer? <br>
+	      Select  your preferences: <br>
 	      <input type= "checkbox" value="sweet" name="preferTaste">sweet
 	      <input type= "checkbox" value="sour" name="preferTaste">sour
 	      <br>
@@ -176,7 +174,7 @@
 	      
 	      <br />
 	      
-	      <input type = "button" value ="Show data" id= "show-data"> 
+	      <input type = "button" value ="Get Recommendations" id= "show-data"> 
 
 	    </form>
 		
@@ -187,19 +185,19 @@
 		
 		
 		<div id="div1" class="right">
-			<h4>Any flavors recommended?</h2>
+			<h4>Create Your Own Flavor</h2>
 			<form name="form2" method="post">
-				User name*: 
+				Your name: 
 				<input type = "text"	name="user_name" id="user_1">
 				<br />
 				<br />
 				
-				Flavor recommended*: 
+				Suggested flavor: 
 				<input type = "text"	name="flavor_recommended" id="fav_1">
 	      <br />
 				<br />
 				
-				Additional comments for recommendation: 
+				Additional comments or description: 
 				<input type = "text"	name="comments" id="com_1">
 				<br />
 				<br />
