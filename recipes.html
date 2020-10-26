@@ -7,6 +7,34 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.recipe-book{
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-around;
+			align-items:stretch;
+		}
+		.recipe{
+			border-radius: 10%;
+			border: 3px solid #2bb656;
+			width:30vw;
+			text-align:center;
+			padding:10px;
+			margin:10px;
+		}
+		.recipe ol, .recipe ul{
+			margin-left:-1em;
+			text-align:left;
+			font-weight:bold;
+		}
+		.recipe ol li, .recipe ul li, p{
+			font-weight:normal;
+			text-align:left;
+		}
+		p{
+			margin-left:.5em;
+		}
+	</style>
 </head>
 <header>
 	<nav>
@@ -30,7 +58,80 @@
 </header>
 <body>
 	<div class="container">
-		
+		<h1>Recipe Ideas</h1>
+		<div class="recipe-book">
+			<div class="recipe">
+				<h2>Popsicles</h2>
+				<img alt="Popsicles" src="images/rec_popsicles.jpg" style="height:20vw;">
+				<ul>
+					Ingredients:
+					<li>1/3 cup sugar</li>
+					<li>2 cups of Bruce's juice</li>
+				</ul>
+				<ol>
+					Directions:
+					<li>In a small saucepan, bring sugar and 1/3 cup water to a boil over high, stirring until sugar dissolves.</li>
+					<li>Transfer to a 4-cup liquid measuring cup or medium bowl and refrigerate until cool, 30 minutes. </li>
+					<li>Stir in juice.</li>
+					<li>Pour mixture into eight 3-ounce ice-pop molds.</li>
+					<li>Insert ice-pop sticks and freeze until solid, 6 hours (or up to 2 weeks).</li>
+				</ol>
+			</div>
+			<div class="recipe">
+				<h2>Cake</h2>
+				<img alt="Cake" src="images/rec_cake.png" style="height:20vw;">
+				<ol>
+					Directions:
+					<li>Find your normal cake recipe.</li>
+					<li>Substitute your cup of water or liquid with Bruce's Juice!</li>
+					<li>Make your cake as you normally would.</li>
+					<li>Decorate your cake with fun colors.</li>
+					<li>Add any or all the fruits you find lying around your kitchen!</li>
+				</ol>
+				<p>If you’re using a premix, a yellow or white sponge cake works best since the flavour of the juice will not clash with the cake. However, if you really want to step out of your comfort zone and experiment a little, you can use a fruit-flavoured cake premix to compliment the flavour of the juice.</p>
+			</div>
+			<div class="recipe">
+				<h2>Sorbet</h2>
+				<img alt="Sorbet" src="images/rec_sorbet.jpg" style="height:20vw;">
+				<br/>
+				<ul>
+					Ingredients:
+					<li>1 cup sugar</li>
+					<li>1 cup water</li>
+					<li>1 1/2 cup juice</li>
+					<li>2 tablespoons lemon juice</li>
+				</ul>
+				<ol>
+					<li>Put the water and the sugar in a small sauce pan over medium heat.</li>
+					<li>Stir until the sugar is all dissolved, then simmer for 5 minutes.</li>
+					<li>Transfer syrup to a container and refrigerate until cold.</li>
+					<li>Cut the lemon in half and squeeze out all the juice. Add the lemon juice and zest to your syrup.</li>
+					<li>Once cold, pour the syrup/lemon mix and the 1 1/2 cups juice into your ice cream maker.</li>
+					<li>Following your machine’s instructions, let it churn until it’s frozen (mine takes about 25 minutes).</li>
+				</ol>
+			</div>
+			<div class="recipe">
+				<h2>Hair Dye</h2>
+				<img alt="Hair-Dye" src="images/rec_hair.png" style="height:20vw;">
+				<br/>
+				<ul>
+					Materials:
+					<li>Head of hair</li>
+					<li>Carrier Oil - coconut or olive oil works well</li>
+					<li>Bruce's Juice</li>
+					<li>Plastic wrap</li>
+				</ul>
+				<ol>
+					<li>Get a parent or friend to help you with this one!</li>
+					<li>Mix juice with carrier oil.</li>
+					<li>Apply the mixture liberally to your hair.</li>
+					<li>Wrap your hair with the plastic wrap</li>
+					<li>Let the mixture sit for at least an hour.</li>
+					<li>Wash it out.</li>
+					<li>Repeat the day after until color is strong enough!</li>
+				</ol>
+			</div>
+		</div>
 	</div>
 </body>
 <footer>
