@@ -55,17 +55,6 @@ nav a:hover, .dropdown:hover .dropbtn {
 
 footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
 
-@media only screen and (max-device-width: 991px) {
-  body { 
-    font-family: Helvetica, Arial, Sans-Serif; 
-  }
-  
-  .container{
-  	margin: 0 2%;
-  }
-}
-
-
 /* The dropdown container */
 /*.dropdown {
   float: left;
@@ -113,4 +102,14 @@ footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
 	display: block;
+}
+
+@media only screen and (max-device-width: 991px) {
+  body { 
+    font-family: Helvetica, Arial, Sans-Serif; 
+  }
+  
+  .container{
+  	margin: 0 2%;
+  }
 }
