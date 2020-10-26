@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Bruce's Juices - Home</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet">
     <style>
     .contact {
@@ -54,24 +55,30 @@
 </head>
 <header>
 	<nav>
-	    <a href="index.html"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
-	    <a href="#">contact us</a>
-	    <a href="#">about us</a>
-	    <a href="#">locations</a>
-	    <a href="flavors.html">flavors</a>
-	    <a href="suggestions.html">suggestions</a>
-	    <a href="#">why bruce</a>
-	    <a href="#">recipes</a>
+	    <a href="index.html" style="align-self:flex-start;"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
+        <div></div>
+        <div></div>
+        <a href="info.html">contact us</a>
+        <a href="about.html">about us</a>
+        <div class="dropdown">
+            <button class="dropbtn">flavors
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="flavors.html">flavors</a>
+                <a href="suggestions.html">suggestions</a>
+                <a href="order.html">order</a>
+                <a href="recipes.html">recipes</a>
+            </div>
+        </div>
   </nav>
 </header>
 <body>
     <div class="container">
         <div class = "contact">
-            <br />
-            <div class = "contact-header">
+            <h1>
                 Contact Bruce and the Team!
-            </div>
-            <br /><br />
+            </h1>
             <div class = "contact-text">
                 We appreciate each and every one of our customers. That's why
                 if you have any questions and concerns regarding the quality
@@ -112,7 +119,7 @@
                 Unfortunately, we're still working on a web app to match our
                 customers to the nearest branch, but in the meantime, here's
                 a list of some of the largest and most popular stores. We
-                can't wait to see in person!
+                can't wait to see you in person!
 
                 <ul>
                     <li>

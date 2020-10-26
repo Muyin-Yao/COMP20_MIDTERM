@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<title>Bruce's Juices - Home</title>
+	<title>Bruce's Juices - Order</title>
     <style>
     /* The container must be positioned relative: */
     .custom-select {
@@ -71,7 +72,7 @@
         font-size: 1.3em;
         display: inline-block;
         border-style: solid;
-        border-width: 20px;
+        border-width: 10px;
         border-radius: 15px;
         padding: 20px;
         margin-bottom: 100px;
@@ -80,7 +81,7 @@
         width:30%;
         display:inline-block;
         border-style: solid;
-        border-width: 20px;
+        border-width: 10px;
         border-radius: 15px;
         vertical-align: top;
         margin-left: 10%;
@@ -94,14 +95,22 @@
 </head>
 <header>
 	<nav>
-	    <a href="index.html"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
-	    <a href="#">contact us</a>
-	    <a href="#">about us</a>
-	    <a href="#">locations</a>
-	    <a href="flavors.html">flavors</a>
-	    <a href="suggestions.html">suggestions</a>
-	    <a href="#">why bruce</a>
-	    <a href="#">recipes</a>
+	    <a href="index.html" style="align-self:flex-start;"><img border="0" alt="Bruce's Juices" src="images/FinalLogo.png" style="height:5vw;"></a>
+		<div></div>
+		<div></div>
+	    <a href="info.html">contact us</a>
+	    <a href="about.html">about us</a>
+	    <div class="dropdown">
+	    	<button class="dropbtn">flavors
+	    		<i class="fa fa-caret-down"></i>
+	    	</button>
+	    	<div class="dropdown-content">
+			    <a href="flavors.html">flavors</a>
+			    <a href="suggestions.html">suggestions</a>
+			    <a href="order.html">order</a>
+			    <a href="recipes.html">recipes</a>
+			</div>
+		</div>
   </nav>
 </header>
 
